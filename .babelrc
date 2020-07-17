@@ -1,0 +1,71 @@
+{
+    "plugins": [
+        "react-hot-loader/babel",
+        "@babel/plugin-proposal-object-rest-spread"
+    ],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": "last 2 versions"
+                }
+            }
+        ],
+        "@babel/preset-react"
+    ],
+    "env": {
+        "test": {
+            "plugins": [
+                "react-hot-loader/babel",
+                "@babel/plugin-proposal-object-rest-spread",
+                "babel-plugin-styled-components"
+            ],
+            "presets": [["@babel/preset-env"], "@babel/preset-react"]
+        },
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel",
+                "@babel/plugin-proposal-object-rest-spread",
+                "babel-plugin-styled-components"
+            ],
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "browsers": "last 2 versions"
+                        }
+                    }
+                ],
+                "@babel/preset-react"
+            ]
+        },
+        "production": {
+            "plugins": [
+                "react-hot-loader/babel",
+                "@babel/plugin-proposal-object-rest-spread",
+                "babel-plugin-styled-components"
+                // [
+                //     "import",
+                //     {
+                //         "libraryName": "@material-ui/core",
+                //         "libraryDirectory": "esm", // default: lib
+                //         "camel2DashComponentName": false // default: true
+                //     }
+                // ]
+            ],
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "browsers": "last 2 versions"
+                        }
+                    }
+                ],
+                "@babel/preset-react"
+            ]
+        }
+    }
+}
